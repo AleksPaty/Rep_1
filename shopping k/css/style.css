@@ -1,0 +1,232 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Rubik:wght@400;600;700&display=swap');
+* {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f0e0e0;
+    box-shadow: 0 1px 4px rgb(157, 155, 155);
+    z-index: 99;
+}
+
+.conteiner {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+}
+.head-menu ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+}
+.head-menu a {
+    padding: 12px;
+    color: #000;
+}
+.head-menu li:hover {
+    box-shadow: 0 2px 0 #000;
+}
+.bxs-cart {
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.hlt-dote {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f52323;
+}
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 16px;
+    height: 100%;
+    width: 320px;
+    background: #fff;
+    box-shadow: -2px 0 4px rgba(157, 155, 155, 0.45);
+    transition: all 0.3s;
+}
+.cart.open {
+    right: 0;
+}
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    padding: 5px;
+}
+.detail {
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-price {
+    font-weight: 500;
+}
+input[type="number"] {
+    width: 2.2rem;
+    border: 1px solid #000;
+    outline-color: #f52323;
+    text-align: center;
+}
+.cart-remove {
+    color: #f52323;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 2px solid #797575;
+}
+.total-title {
+    font-weight: 600;
+}
+.total-price {
+    margin-left: 10px;
+}
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0;
+    padding: 12px 16px;
+    background: #10f00a;
+    border: none;
+    cursor: pointer;
+}
+.btn-buy:hover {
+    font-weight: 600;
+}
+#close-cart {
+    position: absolute;
+    top: 25px;
+    right: 0.9rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 5% 0;
+}
+.section-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.shop {
+    margin-top: 4%;
+}
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.5rem;
+}
+.product-card {
+    position: relative;
+    margin-bottom: 10px;
+}
+.product-card:hover {
+    border: 1px solid #000;
+    transition: all 0.3s;
+}
+.product-card:hover .product-image {
+    padding: 10px;
+    transition: all 0.3s;
+}
+.product-image {
+    width: 100%;
+    max-height: 260px;
+    margin-bottom: 5px;
+    background: rgba(181, 180, 180, 0.503);
+}
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 5px 5px;
+}
+.price {
+    font-weight: 500;
+}
+.bxs-cart-add {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+}
+
+
+@media(max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+    .head-menu a {
+        padding: 8px;
+    }
+    section {
+        padding: 5rem 0 2rem;
+    }
+    .conteiner {
+        margin: 0 auto;
+        width: 92%;
+    }
+}
+@media(max-width: 581px) {
+    .head-menu ul {
+        flex-direction: column;
+    }
+}
+@media(max-width: 471px) {
+    .nav {
+        padding: 11px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    .cart {
+        width: 320px;
+    }
+}
